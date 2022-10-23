@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-A-Sketch Project</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div id="main-container">
+      <section id="welcome-section" class="welcome-section">
+        <h1>Etch A Sketch</h1>
+        <h2>The World's Favorite Drawing Toy</h2>
+      </section>
+      <section id="buttons">
+        <div class="reset">
+          <button id="clear" class="clear">Clear</button>
+        </div>
+        <div class="resolution">
+          <label for="resolution">Grid</label>
+          <input
+            type="range"
+            name="resolution"
+            id="resolution"
+            min="16"
+            max="100"
+            step="2"
+            value="16" />
+          <output class="resolution-output" for="resolution"></output>
+        </div>
+      </section>
+      <div id="container"></div>
+    </div>
+    <script src="etchASketch.js"></script>
+  </body>
+</html>
