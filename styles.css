@@ -7,15 +7,10 @@
   --main-gray: #303841;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -25,11 +20,15 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
   color: var(--main-white);
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
 
 h1,
@@ -52,8 +51,6 @@ h2 {
 #main-container {
   width: 100%;
   height: 100vh;
-  background-color: #000;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
 
 #welcome-section {
@@ -62,8 +59,8 @@ h2 {
 
 #container {
   display: grid;
-  width: 600px;
-  height: 600px;
+  width: 37.5rem;
+  height: 37.5rem;
   margin: 0 auto;
   padding: 0;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
