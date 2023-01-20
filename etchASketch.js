@@ -1,6 +1,5 @@
 'use strict';
 
-// const container = document.getElementById('container');
 const container = document.querySelector('#container');
 const clearButton = document.querySelector('#clear');
 
@@ -11,7 +10,6 @@ function createGrid(rows, cols) {
   container.style.setProperty('--grid-cols', b);
   for (let c = 0; c < a * b; c++) {
     const cell = document.createElement('div');
-    // cell.innerText = c + 1;
     container.appendChild(cell).className = 'grid-item';
   }
 }
@@ -38,10 +36,9 @@ function rainbowColor() {
   return rndCol;
 }
 
-container.addEventListener(
-  'mouseover',
-  (event) => (event.target.style.backgroundColor = rainbowColor())
-);
+container.addEventListener('mouseover', (event) => {
+  event.target.style.backgroundColor = rainbowColor();
+});
 
 function update() {
   const a = output.textContent;
