@@ -1,12 +1,16 @@
+'use strict';
+
 // const container = document.getElementById('container');
 const container = document.querySelector('#container');
 const clearButton = document.querySelector('#clear');
 
 function createGrid(rows, cols) {
-  container.style.setProperty('--grid-rows', rows);
-  container.style.setProperty('--grid-cols', cols);
-  for (c = 0; c < rows * cols; c++) {
-    let cell = document.createElement('div');
+  const a = rows;
+  const b = cols;
+  container.style.setProperty('--grid-rows', a);
+  container.style.setProperty('--grid-cols', b);
+  for (let c = 0; c < a * b; c++) {
+    const cell = document.createElement('div');
     // cell.innerText = c + 1;
     container.appendChild(cell).className = 'grid-item';
   }
@@ -21,7 +25,8 @@ resolution.addEventListener('input', () => {
   output.textContent = resolution.value;
 });
 
-rows = cols = output.textContent;
+const rows = output.textContent;
+const cols = output.textContent;
 createGrid(rows, cols);
 
 function random(number) {
@@ -39,8 +44,8 @@ container.addEventListener(
 );
 
 function update() {
-  let a = output.textContent;
-  let b = output.textContent;
+  const a = output.textContent;
+  const b = output.textContent;
   container.innerHTML = '';
   createGrid(a, b);
 }
